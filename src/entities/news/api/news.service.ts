@@ -3,8 +3,14 @@ import axiosInstance from "@/shared/api/axiosInstance";
 class NewsService {
   private url = "/news";
 
-  async getNews() {
-    const res = await axiosInstance.get<any>(`${this.url}`);
+  async getNewsAll(params?: PaginationRequest) {
+    const res = await axiosInstance.get<NewsListResponse>(`${this.url}`, {
+      params,
+    });
+    return res.data;
+  }
+  async getNewsById(id: string) {
+    const res = await axiosInstance.get<NewsItemSchema>(`${this.url}/${id}`);
     return res.data;
   }
 }

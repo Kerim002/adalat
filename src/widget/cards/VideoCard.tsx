@@ -3,10 +3,10 @@ import { FaPlay } from "react-icons/fa";
 import { dateFormatter, numberShorter } from "@/shared/lib";
 import { useLanguage } from "@/entities/lang";
 
-const VideoCard = ({ item }: { item: MediaSchema }) => {
+const VideoCard = ({ item }: { item: MediaItemSchema }) => {
   const { language } = useLanguage();
   return (
-    <Link to={`/news/${item.id}`} className="">
+    <Link to={`${item.id}`} className="">
       <div className=" rounded-md flex flex-col md:gap-3 gap-1">
         <div className="relative flex items-center justify-center">
           <span className="absolute bg-black bg-opacity-30 rounded-full md:w-16 md:h-16 w-14 h-14 flex items-center justify-center">

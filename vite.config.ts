@@ -11,11 +11,11 @@ export default defineConfig({
   },
   server: {
     host: true,
-    port: 5173,
+    port: 5175,
     cors: true,
     proxy: {
       "/api": {
-        target: "http://192.168.100.224:3000",
+        target: "http://192.168.100.180:3000",
         changeOrigin: true,
         secure: false,
       },

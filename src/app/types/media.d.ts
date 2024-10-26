@@ -1,4 +1,4 @@
-interface MediaSchema {
+interface MediaItemSchema {
   id: number;
   video: string;
   tm_title: string;
@@ -6,4 +6,8 @@ interface MediaSchema {
   ru_title: string;
   date: string;
   view: number;
+}
+
+interface MediaListResponse extends PaginationResponse {
+  media: MediaItemSchema[];
 }

@@ -8,6 +8,7 @@ class RouterLocation {
   law = `${this.location}law`;
   workers = `${this.location}workers`;
   about = `${this.location}about`;
+  chat = `${this.location}chat`;
 }
 
 export const routerLocation = new RouterLocation();

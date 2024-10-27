@@ -8,6 +8,7 @@ import { Laws } from "@/pages/laws";
 import { Workers } from "@/pages/workers";
 import { About } from "@/pages/about";
 import { Law } from "@/pages/law";
+import { Chat } from "@/pages/chat";
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ export const router = createBrowserRouter([
       {
         path: routerLocation.about,
         Component: About,
+      },
+      {
+        path: routerLocation.chat,
+        Component: Chat,
       },
     ],
   },

@@ -1,3 +1,5 @@
-import { useNews } from "./api/useNews";
+import { useNewsByIdQuery } from "./api/useNewsByIdQuery";
+import { useNewsListQuery } from "./api/useNewsListQuery";
+import NewsList from "./ui/NewsList";
 
-export { useNews };
+export { useNewsListQuery, NewsList, useNewsByIdQuery };

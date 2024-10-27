@@ -1,6 +1,6 @@
 interface HomeSchema {
   banners: BannnerSchema[];
-  news: NewsSchema[];
+  news: NewsItemSchema[];
   employers: EmployerSchema[];
-  media: MediaSchema[];
+  media: MediaItemSchema[];
 }

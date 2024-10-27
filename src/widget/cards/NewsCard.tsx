@@ -3,7 +3,7 @@ import { Paragraph } from "@/features";
 import { dateFormatter, numberShorter } from "@/shared/lib";
 import { Link } from "react-router-dom";
 type Props = {
-  item: NewsSchema;
+  item: NewsItemSchema;
 };
 const NewsCard = ({ item }: Props) => {
   const { language } = useLanguage();

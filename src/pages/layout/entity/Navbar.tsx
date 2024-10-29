@@ -77,9 +77,11 @@ const Navbar = ({ setIsOpen }: Props) => {
         </div>
       </div>
       <div className="flex gap-2">
-        <span className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
-          <BiChat className="text-xl" />
-        </span>
+        <Link to="chat">
+          <span className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
+            <BiChat className="text-xl" />
+          </span>
+        </Link>
         <LangButton />
       </div>
     </div>

@@ -2,12 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import { routerLocation } from "../../shared/contants";
 import { Layout } from "@/pages/layout";
 import { Home } from "@/pages/home";
-import { News } from "@/pages/news";
+import { News, SingleNews } from "@/pages/news";
 import { Videos } from "@/pages/videos";
 import { Laws } from "@/pages/laws";
 import { Workers } from "@/pages/workers";
 import { About } from "@/pages/about";
 import { Law } from "@/pages/law";
+import { Chat } from "@/pages/chat";
 
 export const router = createBrowserRouter([
   {
@@ -20,7 +21,16 @@ export const router = createBrowserRouter([
       },
       {
         path: routerLocation.news,
-        Component: News,
+        children: [
+          {
+            index: true,
+            Component: News,
+          },
+          {
+            path: ":id",
+            Component: SingleNews,
+          },
+        ],
       },
 
       {
@@ -47,6 +57,10 @@ export const router = createBrowserRouter([
       {
         path: routerLocation.about,
         Component: About,
+      },
+      {
+        path: routerLocation.chat,
+        Component: Chat,
       },
     ],
   },

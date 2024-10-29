@@ -6,7 +6,7 @@ const NewsList = () => {
   if (!data) {
     return null;
   }
-  return data?.news?.map((item) => <NewsCard key={item.id} item={item} />);
+  return data?.data?.map((item) => <NewsCard key={item.id} item={item} />);
 };
 
 export default NewsList;

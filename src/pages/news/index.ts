@@ -1,2 +1,2 @@
-import { News } from "./ui";
-export { News };
+import { News, SingleNews } from "./ui";
+export { News, SingleNews };

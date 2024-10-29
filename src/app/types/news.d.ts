@@ -12,5 +12,5 @@ interface NewsItemSchema {
 }
 
 interface NewsListResponse extends PaginationResponse {
-  news: NewsItemSchema[];
+  data: NewsItemSchema[];
 }

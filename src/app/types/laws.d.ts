@@ -1,6 +1,4 @@
-interface LawsListResponse extends PaginationOptions {
-  news: LawSchemaItem[];
-}
+type LawsListResponse = PaginationResponse<LawSchemaItem>;
 
 type LawSchemaItem = {
   id: number;

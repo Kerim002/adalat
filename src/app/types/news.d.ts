@@ -11,6 +11,4 @@ interface NewsItemSchema {
   date: string;
 }
 
-interface NewsListResponse extends PaginationResponse {
-  data: NewsItemSchema[];
-}
+type NewsListResponse = PaginationResponse<NewsItemSchema>;

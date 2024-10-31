@@ -9,7 +9,8 @@ interface PaginationRequest {
   limit?: number;
   offset?: number;
 }
-interface PaginationResponse {
+interface PaginationResponse<T> {
+  data: T[];
   limit: number;
   page: number;
   total: number;

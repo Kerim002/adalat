@@ -11,7 +11,7 @@ const VideoCard = ({ item }: { item: MediaItemSchema }) => {
     // <Link to={`${item.id}`} className="">
     <div className=" rounded-md flex flex-col md:gap-3 gap-1">
       <div
-        onClick={() => changeModal(<VideoModal />)}
+        onClick={() => changeModal(<VideoModal item={item} />)}
         className="relative flex items-center justify-center"
       >
         <span className="absolute bg-black bg-opacity-30 rounded-full md:w-16 md:h-16 w-14 h-14 flex items-center justify-center">

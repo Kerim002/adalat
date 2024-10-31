@@ -9,7 +9,7 @@ const NewsCard = ({ item }: Props) => {
   const { language } = useLanguage();
 
   return (
-    <Link to="/news" className="">
+    <Link to={`/news/${item.id}`} className="">
       <div className=" rounded-md flex flex-col xl:gap-2 gap-1">
         <img
           src={item.image}

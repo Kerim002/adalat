@@ -6,7 +6,7 @@ const LawsList = () => {
   if (!data) {
     return null;
   }
-  return data?.news?.map((item, index) => (
+  return data?.data?.map((item, index) => (
     <Link key={item.id} to={`${item.id}`}>
       <li className="text-xl md:text-2xl p-2 border-b">
         {index + 1}. {item.title}

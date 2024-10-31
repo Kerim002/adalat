@@ -8,6 +8,4 @@ interface MediaItemSchema {
   view: number;
 }
 
-interface MediaListResponse extends PaginationResponse {
-  media: MediaItemSchema[];
-}
+type MediaListResponse = PaginationResponse<MediaItemSchema>;

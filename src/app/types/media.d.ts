@@ -9,6 +9,4 @@ interface MediaItemSchema {
   cover: string;
 }
 
-interface MediaListResponse extends PaginationResponse {
-  media: MediaItemSchema[];
-}
+type MediaListResponse = PaginationResponse<MediaItemSchema>;

@@ -6,6 +6,7 @@ interface MediaItemSchema {
   ru_title: string;
   date: string;
   view: number;
+  cover: string;
 }
 
 interface MediaListResponse extends PaginationResponse {

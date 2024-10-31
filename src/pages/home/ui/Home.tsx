@@ -3,10 +3,8 @@ import { PageAnimationWrapper } from "@/widget/animationwrapper";
 import { Footer } from "@/widget/footer";
 import {
   BestReadSection,
-  ButtomSlogan,
   NewsSection,
   SwiperSection,
-  TopSlogan,
   VideosSection,
   WorkersSection,
 } from "@/widget/home";
@@ -18,9 +16,7 @@ const Home = () => {
   }
   return (
     <PageAnimationWrapper className="min-h-screen flex flex-col md:gap-8 gap-5 px-3">
-      {/* Section 1 */}
-      <TopSlogan />
-      {/* section 2 */}
+      {/* <TopSlogan /> */}
 
       <BestReadSection />
       {/* News section */}
@@ -33,8 +29,7 @@ const Home = () => {
 
       {/* Video section */}
       <VideosSection />
-      <ButtomSlogan />
-      {/* footer */}
+      {/* <ButtomSlogan /> */}
       <Footer />
     </PageAnimationWrapper>
   );

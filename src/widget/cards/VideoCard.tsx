@@ -18,7 +18,7 @@ const VideoCard = ({ item }: { item: MediaItemSchema }) => {
           <FaPlay className="md:text-xl text-lg text-white" />
         </span>
         <img
-          src={item.video}
+          src={item.cover}
           className="xl:h-64 lg:h-60 md:h-56 sm:h-48 h-40 w-full object-cover rounded-2xl"
           alt=""
         />

@@ -1,6 +1,6 @@
 const TopSlogan = () => {
   return (
-    <div className="w-full bg-secondary md:py-7 py-3 px-2 rounded-2xl border  mt-5 flex  flex-col lg:gap-5 sm:gap-3">
+    <div className="w-full bg-bgsecondary md:py-7 py-3 px-2 rounded-2xl border  mt-5 flex  flex-col lg:gap-5 sm:gap-3">
       {/* <div className="w-full bg-gray-800 md:py-7 py-3 px-2 rounded-2xl border  mt-5 flex  flex-col lg:gap-5 sm:gap-3"> */}
       <h1 className="text-center lg:text-4xl  sm:text-3xl text-2xl  font-thin">
         Hos Geldiniz !

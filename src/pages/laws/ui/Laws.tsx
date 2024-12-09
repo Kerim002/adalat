@@ -3,7 +3,7 @@ import { PageAnimationWrapper } from "@/widget/animationwrapper";
 
 const Laws = () => {
   return (
-    <PageAnimationWrapper>
+    <PageAnimationWrapper className="min-h-screen">
       <ol className="px-4 flex flex-col gap-4">
         <LawsList />
       </ol>

@@ -7,13 +7,13 @@ import translationTM from "./locales/tm.json";
 import translationRU from "./locales/ru.json";
 
 i18n.use(initReactI18next).init({
-  lng: localStorage.getItem("language") || "en",
+  lng: localStorage.getItem("language") || "tm",
   resources: {
     tm: { translation: translationTM },
     en: { translation: translationEN },
     ru: { translation: translationRU },
   },
-  fallbackLng: "en",
+  fallbackLng: "tm",
 });
 
 export default i18n;

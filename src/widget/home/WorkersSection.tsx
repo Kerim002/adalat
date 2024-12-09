@@ -3,7 +3,8 @@ import SectionTitle from "../custom/SectionTitle";
 const WorkersSection = () => {
   return (
     <div className="w-full">
-      <SectionTitle title="Isgarler" />
+      <SectionTitle title="worker" />
+
       <EmployerList />
     </div>
   );

@@ -1,9 +1,18 @@
-import { Link } from "react-router-dom";
-
 const Footer = () => {
   return (
-    <div>
-      <div className="flex w-full mt-5 items-center">
+    <div className="flex flex-col md:flex-row h-96 md:h-52 mt-4 border-b-8 border-bronze">
+      <div className="bg-white flex-1 border-b-8 border-bronze md:border-b-0 md:border-r-8 flex items-center justify-center">
+        <img className="h-40" src="/logo.svg" alt="" />
+      </div>
+      <div className="flex-1 md:flex-[3] bg-darkbordo"></div>
+    </div>
+  );
+};
+
+export default Footer;
+
+{
+  /* <div className="flex w-full mt-5 items-center">
         <div className="flex-1">
           <h2 className="text-red-500 text-3xl font-semibold">
             Adalatly Maslahat
@@ -32,9 +41,5 @@ const Footer = () => {
         <div className="flex-1">
           <div></div>
         </div>
-      </div>
-    </div>
-  );
-};
-
-export default Footer;
+      </div> */
+}

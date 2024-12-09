@@ -3,7 +3,7 @@ import { RouterProvider } from "react-router-dom";
 import { Suspense } from "react";
 import { router } from "../router/router";
 import ModalContext from "./ModalProvider";
-
+import "../../shared/lang/i18n";
 export const Providers = () => {
   const queryClient = new QueryClient({
     defaultOptions: {

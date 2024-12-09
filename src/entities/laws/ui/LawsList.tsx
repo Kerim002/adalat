@@ -8,7 +8,7 @@ const LawsList = () => {
   }
   return data?.data?.map((item, index) => (
     <Link key={item.id} to={`${item.id}`}>
-      <li className="text-xl md:text-2xl p-2 border-b">
+      <li className="text-xl md:text-2xl p-2 border-b-4 border-bronze">
         {index + 1}. {item.title}
       </li>
     </Link>

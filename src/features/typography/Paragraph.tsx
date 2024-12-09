@@ -5,16 +5,9 @@ type Props = {
 };
 
 const Paragraph = ({ title }: Props) => {
-  const screen = useScreenWidth();
-
   return (
-    <p className="text-gray-200 md:text-base text-sm">
-      {screen < 500
-        ? title.slice(0, 100)
-        : screen < 768
-        ? title.slice(0, 150)
-        : title.slice(0, 150)}
-      {title.length > 150 && "..."}
+    <p className="text-gray-200 truncate-lines truncate-4-lines md:text-base text-sm">
+      {title}
     </p>
   );
 };

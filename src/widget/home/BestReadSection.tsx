@@ -12,7 +12,7 @@ const BestReadSection = () => {
         </p>
       </div>
       <div className="flex-1 flex flex-col md:gap-2 ">
-        <h1 className="text-2xl font-medium font-serif xl:leading-[55px]">
+        <h1 className="text-2xl font-medium font-serif xl:leading-[55px] ">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </h1>
         <p className="text-gray-200">
@@ -23,7 +23,7 @@ const BestReadSection = () => {
           quisquam consectetur?
         </p>
         <div className="flex items-center gap-2">
-          <span className="text-red-500 font-semibold">
+          <span className=" font-semibold text-bronze">
             In kop okalan habar
           </span>
           •<span>455 okaldy</span>

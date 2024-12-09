@@ -15,22 +15,17 @@ const Home = () => {
     return <>Loading</>;
   }
   return (
-    <PageAnimationWrapper className="min-h-screen flex flex-col md:gap-8 gap-5 px-3">
+    <PageAnimationWrapper className="min-h-screen flex flex-col md:gap-8 gap-5 2xl:p-0  sm:px-4 px-3">
       {/* <TopSlogan /> */}
-
-      <BestReadSection />
-      {/* News section */}
-
-      <NewsSection />
-      {/* worker section */}
-      <WorkersSection />
-      {/* Slider section */}
       <SwiperSection />
+      <BestReadSection />
 
-      {/* Video section */}
       <VideosSection />
+      <WorkersSection />
+      <NewsSection />
+      {/* Slider section */}
+
       {/* <ButtomSlogan /> */}
-      <Footer />
     </PageAnimationWrapper>
   );
 };

@@ -1,10 +1,16 @@
 // hooks/useWebSocketChat.js
 import { useState, useEffect } from "react";
 
+type SocketMessage = {
+  user_id: number;
+  content: string;
+  created_at: string;
+  rule: string;
+  id: number;
+};
+
 export const useWebSocketChat = (url: string) => {
-  const [messages, setMessages] = useState<
-    { id: number; content: string; rule: "Admin" | "User" }[]
-  >([]);
+  const [messages, setMessages] = useState<SocketMessage[]>([]);
   const [socket, setSocket] = useState<any>(null);
 
   useEffect(() => {
@@ -13,21 +19,25 @@ export const useWebSocketChat = (url: string) => {
 
     ws.onmessage = (event) => {
       const newMessage = JSON.parse(event.data);
-      if (Array.isArray(newMessage.data)) {
-        setMessages((prev: any) => [...prev, ...newMessage.data]);
-      } else {
-        setMessages((prev: any) => [...prev, newMessage.data]);
-      }
+      console.log(newMessage);
+      setMessages((prevMessages) => [...prevMessages, newMessage]);
     };
 
     return () => {
       ws.close();
     };
-  }, [url]);
+  }, []);
 
   const sendMessage = (message: any) => {
     if (socket && socket.readyState === WebSocket.OPEN) {
-      socket.send(JSON.stringify({ content: message }));
+      socket.send(
+        JSON.stringify({
+          content: message,
+          rule: "User",
+          created_at: new Date(),
+          user_id: localStorage.getItem("userid"),
+        })
+      );
     }
   };
 

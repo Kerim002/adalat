@@ -1,8 +1,8 @@
-import { FaPlay } from "react-icons/fa";
 import { dateFormatter, numberShorter } from "@/shared/lib";
 import { useLanguage } from "@/entities/lang";
 import { useModal } from "@/shared/hooks/useModal";
 import { VideoModal } from "../modal";
+import { IoPlayOutline } from "react-icons/io5";
 
 const VideoCard = ({ item }: { item: MediaItemSchema }) => {
   const { language } = useLanguage();
@@ -15,20 +15,24 @@ const VideoCard = ({ item }: { item: MediaItemSchema }) => {
         className="relative flex items-center justify-center"
       >
         <span className="absolute bg-black bg-opacity-30 rounded-full md:w-16 md:h-16 w-14 h-14 flex items-center justify-center">
-          <FaPlay className="md:text-xl text-lg text-white" />
+          <IoPlayOutline className="text-3xl text-white" />
         </span>
         <img
-          src={item.cover}
-          className="xl:h-64 lg:h-60 md:h-56 sm:h-48 h-40 w-full object-cover rounded-2xl"
+          src="/test/test1.jpg"
+          // src={item.cover}
+          className=" w-full object-cover rounded-2xl aspect-[4/3] md:border-4 border-[3px] border-bronze"
           alt=""
         />
       </div>
-      <h3 className="md:text-2xl text-lg font-semibold font-serif ">
-        {item[`${language}_title`]}
-      </h3>
-      <div className="flex items-center gap-1 font-semibold md:text-sm text-xs text-red-500">
-        <span className="">{dateFormatter(item.date, true)}</span>•
-        <span>{numberShorter(item.view)} okaldy</span>
+      <div>
+        <h3 className="truncate-lines truncate-3-lines px-3 md:text-xl  md:h-24 h-20  mb-2">
+          {item[`${language}_title`]}
+        </h3>
+        <hr className="border-t-2 border-bronze " />
+        <div className="flex px-3 items-center mt-1.5 gap-1 font-semibold md:text-sm text-xs text-bronze">
+          <span className="">{dateFormatter(item.date, true)}</span>|
+          <span>{numberShorter(item.view)} okaldy</span>
+        </div>
       </div>
     </div>
     // </Link>

@@ -1,6 +1,7 @@
-import { BiHome } from "react-icons/bi";
-import { Link, NavLink } from "react-router-dom";
+import { BiHome, BiNews, BiQuestionMark, BiVideo } from "react-icons/bi";
+import { NavLink } from "react-router-dom";
 import { tv } from "tailwind-variants";
+import { VscLaw } from "react-icons/vsc";
 
 type Props = {
   isOpen: boolean;
@@ -9,8 +10,7 @@ type Props = {
 
 const Sidebar = ({ isOpen, setIsOpen }: Props) => {
   const condition = tv({
-    base: "bg-primary text-textbase md:hidden z-50 fixed top-0 bottom-0  sm:w-[45%] w-[65%]  transition-transform transform flex flex-col",
-    // base: "lg:max-w-[240px] bg-red-400 lg:min-w-[200px] md:max-w-[240px] md:min-w-[200px]  z-30 md:static fixed top-0 bottom-0 sm:w-[40%] w-[50%]  transition-transform transform",
+    base: "bg-mainblack text-textbase md:hidden z-50 fixed top-0 bottom-0  sm:w-[45%] w-[65%]  transition-transform transform flex flex-col",
     variants: {
       open: {
         true: "translate-x-0",
@@ -27,7 +27,7 @@ const Sidebar = ({ isOpen, setIsOpen }: Props) => {
     <>
       {isOpen && (
         <div
-          className="fixed inset-0 bg-slate-700 bg-opacity-50 z-30 left-0 right-0 top-0 bottom-0 md:hidden"
+          className="fixed inset-0  bg-mainblack bg-opacity-50 z-30 left-0 right-0 top-0 bottom-0 md:hidden"
           onClick={() => setIsOpen(false)}
         ></div>
       )}
@@ -43,7 +43,7 @@ const Sidebar = ({ isOpen, setIsOpen }: Props) => {
             to="/"
             className={({ isActive }) =>
               `${
-                isActive ? "bg-colder" : ""
+                isActive ? "bg-gray-800" : ""
               } flex items-center py-1.5 px-3 rounded-lg text-xl gap-1`
             }
           >
@@ -59,7 +59,8 @@ const Sidebar = ({ isOpen, setIsOpen }: Props) => {
               } flex items-center py-1.5 px-3 rounded-lg text-xl gap-1`
             }
           >
-            <BiHome className="text-2xl" />
+            <VscLaw className="text-2xl" />
+
             <p>Laws</p>
           </NavLink>
           <NavLink
@@ -71,7 +72,7 @@ const Sidebar = ({ isOpen, setIsOpen }: Props) => {
               } flex items-center py-1.5 px-3 rounded-lg text-xl gap-1`
             }
           >
-            <BiHome className="text-2xl" />
+            <BiNews className="text-2xl" />
             <p>News</p>
           </NavLink>
           <NavLink
@@ -83,7 +84,7 @@ const Sidebar = ({ isOpen, setIsOpen }: Props) => {
               } flex items-center py-1.5 px-3 rounded-lg text-xl gap-1`
             }
           >
-            <BiHome className="text-2xl" />
+            <BiVideo className="text-2xl" />
             <p>Videos</p>
           </NavLink>
           <NavLink
@@ -95,7 +96,7 @@ const Sidebar = ({ isOpen, setIsOpen }: Props) => {
               } flex items-center py-1.5 px-3 rounded-lg text-xl gap-1`
             }
           >
-            <BiHome className="text-2xl" />
+            <BiQuestionMark className="text-2xl" />
             <p>About</p>
           </NavLink>
         </div>

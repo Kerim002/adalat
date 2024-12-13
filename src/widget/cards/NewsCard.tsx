@@ -17,12 +17,14 @@ const NewsCard = ({ item }: Props) => {
           className="aspect-[5/4] w-full border-2 border-bronze object-cover rounded-2xl"
           alt=""
         />
-        <h3 className="truncate-lines px-3 font-sans truncate-2-lines lg:text-2xl md:text-xl text-lg font-semibold  xl:leading-8">
-          {item[`${language}_title`]}
-        </h3>
-        <span className="px-3">
-          <Paragraph title={item[`${language}_description`]} />
-        </span>
+        <div className="md:h-40  h-36 flex flex-col gap-2">
+          <h3 className="truncate-lines px-3 font-sans truncate-2-lines lg:text-2xl md:text-xl text-lg font-semibold  xl:leading-8">
+            {item[`${language}_title`]}
+          </h3>
+          <span className="px-3">
+            <Paragraph title={item[`${language}_description`]} />
+          </span>
+        </div>
         <hr className="border-t-2 border-bronze " />
 
         <div className="flex items-center px-3 gap-1 lg:text-base md:text-xs text-[10px] font-semibold  text-bronze">

@@ -16,7 +16,7 @@ const Layout = () => {
       <div className="h-full  overflow-auto 2xl:w-[1420px] z-20 text-white no-scrollbar mx-auto bg-mainblack   relative">
         {/* Navbar */}
         <Navbar setIsOpen={setIsOpen} />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div className="min-h-screen">Loading...</div>}>
           <Outlet />
         </Suspense>
         {pathname !== "/chat" ? <Footer /> : null}

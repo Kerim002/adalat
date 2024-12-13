@@ -25,9 +25,9 @@ const BannerList = () => {
         return (
           <SwiperSlide key={item.id}>
             <img
-              className="w-full h-full object-cover object-center cursor-pointer"
-              // src={item.image}
-              src="/test/test1.jpg"
+              className="w-full h-full max-h-[55vh] object-cover object-center cursor-pointer"
+              src={item.image}
+              // src="/test/test1.jpg"
               alt=""
             />
           </SwiperSlide>

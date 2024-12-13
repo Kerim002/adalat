@@ -18,8 +18,8 @@ const VideoCard = ({ item }: { item: MediaItemSchema }) => {
           <IoPlayOutline className="text-3xl text-white" />
         </span>
         <img
-          src="/test/test1.jpg"
-          // src={item.cover}
+          // src="/test/test1.jpg"
+          src={item.cover}
           className=" w-full object-cover rounded-2xl aspect-[4/3] md:border-4 border-[3px] border-bronze"
           alt=""
         />

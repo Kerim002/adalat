@@ -3,11 +3,12 @@ import Sidebar from "../entity/Sidebar";
 import { Suspense, useState } from "react";
 import { Navbar } from "../entity";
 import { Footer } from "@/widget/footer";
+import { useChat } from "@/entities/chat/api/useChat";
 
 const Layout = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useLocation();
-  console.log(pathname);
+  useChat();
   return (
     // <div className="w-full h-screen relative bg-gray-800">
     <div className="w-full h-screen relative bg-mainblack ">

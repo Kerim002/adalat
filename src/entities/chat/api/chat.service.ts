@@ -6,6 +6,7 @@ class ChatService {
   async getChatId() {
     try {
       const res = await axiosInstance.get(`${this.URL}/me`);
+      console.log(res.data);
       if (localStorage.getItem("userid") === null) {
         localStorage.setItem("userid", res.data.user_id);
       }

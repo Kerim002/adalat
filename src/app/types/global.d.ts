@@ -7,7 +7,7 @@ type LanguageModalItemProps = {
 
 interface PaginationRequest {
   limit?: number;
-  offset?: number;
+  page?: number;
 }
 interface PaginationResponse<T> {
   data: T[];

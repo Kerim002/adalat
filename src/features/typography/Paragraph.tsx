@@ -1,5 +1,3 @@
-import { useScreenWidth } from "@/shared/hooks/useScreenWidth";
-
 type Props = {
   title: string;
 };

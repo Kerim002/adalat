@@ -4,7 +4,7 @@ import SectionTitle from "../custom/SectionTitle";
 const NewsSection = () => {
   return (
     <div className="w-full">
-      <SectionTitle link="news" title="Sonky habarlar" />
+      <SectionTitle link="news" title="hot_news" />
       <NewsList />
     </div>
   );

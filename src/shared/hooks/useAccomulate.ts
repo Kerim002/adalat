@@ -6,8 +6,8 @@ export const useAccumulate = <T>(
   if (!data) {
     return [];
   }
-  return data?.pages.reduce((acc: MediaItemSchema[], page: any) => {
-    const uniqueIds = new Set(acc.map((item) => item.id));
+  return data?.pages.reduce((acc: T[], page: any) => {
+    const uniqueIds = new Set(acc.map((item: any) => item.id));
 
     const newItems = page.data.filter((item: any) => !uniqueIds.has(item.id));
 

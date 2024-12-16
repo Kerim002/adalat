@@ -1,10 +1,25 @@
 const Footer = () => {
   return (
-    <div className="flex flex-col md:flex-row h-96 md:h-52 mt-4 border-b-8 border-bronze">
+    <div className="flex flex-col md:flex-row h-96 md:h-52 border-b-8 border-bronze mt-8">
       <div className="bg-white flex-1 border-b-8 border-bronze md:border-b-0 md:border-r-8 flex items-center justify-center">
         <img className="h-40" src="/logo.svg" alt="" />
       </div>
-      <div className="flex-1 md:flex-[3] bg-darkbordo"></div>
+      <div className="flex-1 md:flex-[3] bg-darkbordo  flex flex-col md:flex-row md:justify-center p-2 gap-3">
+        <div className="flex-1 flex justify-center flex-col gap-2">
+          <p className="text-center text-xl">Contact with us</p>
+          <div className="flex items-center gap-2 justify-center md:flex-col">
+            <p>example@gmail.com</p>
+            <p>+99365385973</p>
+          </div>
+        </div>
+        <div className="flex flex-col gap-4 flex-1 md:justify-center">
+          <p className="text-center text-xl">Use our app</p>
+          <div className="flex items-center justify-center gap-3 ">
+            <img src="/apple.png" alt="" />
+            <img src="/play.png" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

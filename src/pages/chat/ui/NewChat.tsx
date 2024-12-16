@@ -20,59 +20,14 @@ const NewChat = () => {
   }, [messages]);
   return (
     <PageAnimationWrapper className="h-[calc(100vh-116px)]  flex flex-col">
-      <div className="flex-1 overflow-auto h-full pt-3">
-        <AdminMessage
-          content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
-        corporis. Quo odio omnis obcaecati magni, autem dolore, iusto nemo
-        soluta expedita quos ipsam dicta facere quisquam quibusdam maxime
-        laudantium nisi?"
-        />
-
-        <ClientMessage
-          content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
-        corporis. Quo odio omnis obcaecati magni, autem dolore, iusto nemo
-        soluta expedita quos ipsam dicta facere quisquam quibusdam maxime
-        laudantium nisi?"
-        />
-        <AdminMessage
-          content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
-        corporis. Quo odio omnis obcaecati magni, autem dolore, iusto nemo
-        soluta expedita quos ipsam dicta facere quisquam quibusdam maxime
-        laudantium nisi?"
-        />
-
-        <ClientMessage
-          content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
-        corporis. Quo odio omnis obcaecati magni, autem dolore, iusto nemo
-        soluta expedita quos ipsam dicta facere quisquam quibusdam maxime
-        laudantium nisi?"
-        />
-        <AdminMessage
-          content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
-        corporis. Quo odio omnis obcaecati magni, autem dolore, iusto nemo
-        soluta expedita quos ipsam dicta facere quisquam quibusdam maxime
-        laudantium nisi?"
-        />
-
-        <ClientMessage
-          content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
-        corporis. Quo odio omnis obcaecati magni, autem dolore, iusto nemo
-        soluta expedita quos ipsam dicta facere quisquam quibusdam maxime
-        laudantium nisi?"
-        />
-        <AdminMessage
-          content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
-        corporis. Quo odio omnis obcaecati magni, autem dolore, iusto nemo
-        soluta expedita quos ipsam dicta facere quisquam quibusdam maxime
-        laudantium nisi?"
-        />
-
-        <ClientMessage
-          content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
-        corporis. Quo odio omnis obcaecati magni, autem dolore, iusto nemo
-        soluta expedita quos ipsam dicta facere quisquam quibusdam maxime
-        laudantium nisi?"
-        />
+      <div className="flex-1 flex flex-col overflow-auto h-full pt-3 gap-3">
+        {messages.map((message) =>
+          message.rule === "User" ? (
+            <ClientMessage content={message.content} />
+          ) : (
+            <AdminMessage content={message.content} />
+          )
+        )}
       </div>
       <div className="min-h-16 flex items-center justify-center  w-full">
         <ChatInput sendMessage={sendMessage} />

@@ -5,7 +5,7 @@ type SocketMessage = {
   user_id: number;
   content: string;
   created_at: string;
-  rule: string;
+  rule: "User" | "Admin";
   id: number;
 };
 

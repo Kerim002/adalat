@@ -1,1 +1,0 @@
-import{j as a,m as o}from"./index-DwUxbiYq.js";const r=({children:i,className:t})=>a.jsx(o.div,{initial:{opacity:0},animate:{opacity:1},exit:{opacity:0},transition:{duration:.5},className:`w-full ${t}`,children:i});export{r as P};

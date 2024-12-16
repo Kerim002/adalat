@@ -16,6 +16,7 @@ const NewsCard = ({ item }: Props) => {
           // src="/test/test2.jpg"
           className="aspect-[5/4] w-full border-2 border-bronze object-cover rounded-2xl"
           alt=""
+          onError={(i: any) => (i.target.src = "/test/test3.jpg")}
         />
         <div className="md:h-40  h-36 flex flex-col gap-2">
           <h3 className="truncate-lines px-3 font-sans truncate-2-lines lg:text-2xl md:text-xl text-lg font-semibold  xl:leading-8">

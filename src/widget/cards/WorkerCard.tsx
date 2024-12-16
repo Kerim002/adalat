@@ -9,6 +9,7 @@ const WorkerCard = ({ item }: Props) => {
         src={item?.image}
         // src="/test/face1.jpg"
         alt=""
+        onError={(i: any) => (i.target.src = "/test/test3.jpg")}
       />
       <div className="flex flex-col h-fit lg:text-left text-center">
         <h2 className="md:text-xl text-lg">

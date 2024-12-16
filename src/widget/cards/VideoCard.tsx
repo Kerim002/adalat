@@ -22,6 +22,7 @@ const VideoCard = ({ item }: { item: MediaItemSchema }) => {
           src={item.cover}
           className=" w-full object-cover rounded-2xl aspect-[4/3] md:border-4 border-[3px] border-bronze"
           alt=""
+          onError={(i: any) => (i.target.src = "/test/test3.jpg")}
         />
       </div>
       <div>

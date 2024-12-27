@@ -6,7 +6,9 @@ import ClientMessage from "./ClientMessage";
 
 const ChatList = () => {
   const { messages, sendMessage } = useWebSocketChat(
-    `ws://localhost:3000/api/chat/ws/?user_id=${localStorage.getItem("userid")}`
+    `${import.meta.env.VITE_WEB_SOCKET_URL}/?user_id=${localStorage.getItem(
+      "userid"
+    )}`
   );
   const chatEndRef = useRef<HTMLDivElement>(null);
 
@@ -20,6 +22,7 @@ const ChatList = () => {
     <>
       <div className="w-full  flex-col justify-end overflow-auto">
         {messages.map((item) => {
+          console.log(item);
           if (item.rule === "User") {
             return <ClientMessage key={item.id} content={item.content} />;
           } else {

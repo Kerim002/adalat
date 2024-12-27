@@ -13,13 +13,14 @@ export default defineConfig({
     host: true,
     port: 4000,
     cors: true,
-    proxy: {
-      "/api": {
-        // target: "http://216.250.10.181:9000",
-        target: "http://localhost:8000",
-        changeOrigin: true,
-        secure: false,
-      },
-    },
+    // proxy: {
+    //   "/api": {
+    //     target: "http://216.250.10.181:9000",
+    //     // target: "http://192.168.100.244:3000",
+    //     // target: "http://localhost:3000",
+    //     changeOrigin: true,
+    //     secure: false,
+    //   },
+    // },
   },
 });

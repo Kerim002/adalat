@@ -1,12 +1,14 @@
 import { NewsCard } from "@/widget/cards";
 import { useNewsListQuery } from "../api/useNewsListQuery";
+import { useAccumulate } from "@/shared/hooks";
 
 const NewsList = () => {
   const { data } = useNewsListQuery();
   if (!data) {
     return null;
   }
-  return data?.data?.map((item) => <NewsCard key={item.id} item={item} />);
+  const newsList = useAccumulate<NewsListResponse>(data);
+  return newsList.map((item) => <NewsCard key={item.id} item={item} />);
 };
 
 export default NewsList;

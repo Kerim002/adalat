@@ -9,10 +9,10 @@ const Law = () => {
   }
   const { data } = useLawByIdQuery(id);
   if (!data) {
-    return <div>Kanun yoxdur.</div>;
+    return <div>Kanun yokdur.</div>;
   }
   return (
-    <PageAnimationWrapper>
+    <PageAnimationWrapper className="min-h-screen">
       <div dangerouslySetInnerHTML={{ __html: data?.title }}></div>
     </PageAnimationWrapper>
   );

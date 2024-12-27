@@ -1,12 +1,6 @@
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import { LangButton } from "@/features";
 import { useTranslation } from "react-i18next";
 import { BiChat, BiMenu } from "react-icons/bi";
-import { LuSendHorizonal } from "react-icons/lu";
 import { Link, NavLink } from "react-router-dom";
 
 type Props = {
@@ -116,7 +110,7 @@ export default Navbar;
             onClick={() => setIsOpen(true)}
             className="text-4xl text-white md:hidden"
           />
-          <Link to="/" className="flex items-center gap-2 hidden">
+          <Link to="/" className="items-center gap-2 hidden">
             <img src="/logo.svg" className="w-12 h-12" alt="" />
             <h1 className="md:text-3xl text-2xl  font-semibold text-red-500">
               Adalatly

@@ -1,14 +1,16 @@
 {
-    "laws": "Kanunlar",
-    "news": "Habarlar",
-    "videos": "Wideo",
-    "about": "Biz barada",
-    "seeall": "Hemmesini görmek",
-    "worker": "Işgärler",
-    "lastvideos": "Soňky wideolar",
-    "lastnews": "Soňky habarlar",
-    "contact": "Habarlaşyň",
-    "programs": "Programmamyzdan peýdalanyň",
-    "view":"Görüldi",
-    "home":"Esasy sahypa"
+  "laws": "Kanunlar",
+  "news": "Habarlar",
+  "videos": "Wideo",
+  "about": "Biz barada",
+  "seeall": "Hemmesini görmek",
+  "worker": "Işgärler",
+  "lastvideos": "Soňky wideolar",
+  "lastnews": "Soňky habarlar",
+  "contact": "Habarlaşyň",
+  "programs": "Programmamyzdan peýdalanyň",
+  "view": "Görüldi",
+  "home": "Esasy sahypa",
+  "hot_news": "Soňky habarlar",
+  "hot_media": "Soňky wideolar"
 }

@@ -5,7 +5,7 @@ type SocketMessage = {
   user_id: number;
   content: string;
   created_at: string;
-  rule: string;
+  rule: "User" | "Admin";
   id: number;
 };
 
@@ -16,7 +16,6 @@ export const useWebSocketChat = (url: string) => {
   useEffect(() => {
     const ws = new WebSocket(url);
     setSocket(ws);
-
     ws.onmessage = (event) => {
       const newMessage = JSON.parse(event.data);
       console.log(newMessage);
@@ -29,6 +28,7 @@ export const useWebSocketChat = (url: string) => {
   }, []);
 
   const sendMessage = (message: any) => {
+    console.log(message);
     if (socket && socket.readyState === WebSocket.OPEN) {
       socket.send(
         JSON.stringify({

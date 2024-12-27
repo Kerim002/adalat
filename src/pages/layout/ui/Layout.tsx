@@ -7,7 +7,6 @@ import { Footer } from "@/widget/footer";
 const Layout = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useLocation();
-  console.log(pathname);
   return (
     // <div className="w-full h-screen relative bg-gray-800">
     <div className="w-full h-screen relative bg-mainblack ">

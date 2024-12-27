@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { router } from "../router/router";
 import ModalContext from "./ModalProvider";
 import "../../shared/lang/i18n";
+import { HelmetProvider } from "react-helmet-async";
 export const Providers = () => {
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -16,9 +17,11 @@ export const Providers = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <Suspense fallback={<div>Loading...</div>}>
-        <ModalContext>
-          <RouterProvider router={router} />
-        </ModalContext>
+        <HelmetProvider>
+          <ModalContext>
+            <RouterProvider router={router} />
+          </ModalContext>
+        </HelmetProvider>
       </Suspense>
     </QueryClientProvider>
   );

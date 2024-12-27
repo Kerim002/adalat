@@ -13,7 +13,7 @@ const Law = () => {
   }
   return (
     <PageAnimationWrapper className="min-h-screen">
-      <div dangerouslySetInnerHTML={{ __html: data?.title }}></div>
+      <div dangerouslySetInnerHTML={{ __html: data?.laws }}></div>
     </PageAnimationWrapper>
   );
 };

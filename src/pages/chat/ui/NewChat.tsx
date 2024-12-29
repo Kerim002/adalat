@@ -7,7 +7,7 @@ import { useEffect, useRef } from "react";
 
 const NewChat = () => {
   const { messages, sendMessage } = useWebSocketChat(
-    `${import.meta.env.VITE_WEB_SOCKET_URL}/?user_id=${localStorage.getItem(
+    `${import.meta.env.VITE_WEB_SOCKET_URL}/ws?user_id=${localStorage.getItem(
       "userid"
     )}`
   );
